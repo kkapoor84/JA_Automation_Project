@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="12" passed="12">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="430720" started-at="2018-05-10T05:52:00Z" finished-at="2018-05-10T05:59:10Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="430720" started-at="2018-05-10T05:52:00Z" finished-at="2018-05-10T05:59:10Z">
+      <class name="Test.APITest">
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:Test.APITest@523884b2]" name="initDriver" is-config="true" duration-ms="4500" started-at="2018-05-10T11:22:00Z" finished-at="2018-05-10T11:22:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="courseRequestAPI()[pri:1, instance:Test.APITest@523884b2]" name="courseRequestAPI" duration-ms="836" started-at="2018-05-10T11:22:04Z" finished-at="2018-05-10T11:22:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- courseRequestAPI -->
+        <test-method status="PASS" signature="openURL()[pri:2, instance:Test.APITest@523884b2]" name="openURL" duration-ms="14053" started-at="2018-05-10T11:22:05Z" finished-at="2018-05-10T11:22:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openURL -->
+        <test-method status="PASS" signature="requestApprovalpage()[pri:3, instance:Test.APITest@523884b2]" name="requestApprovalpage" duration-ms="35775" started-at="2018-05-10T11:22:19Z" finished-at="2018-05-10T11:22:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- requestApprovalpage -->
+        <test-method status="PASS" signature="dbQuery()[pri:4, instance:Test.APITest@523884b2]" name="dbQuery" duration-ms="51" started-at="2018-05-10T11:22:55Z" finished-at="2018-05-10T11:22:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dbQuery -->
+        <test-method status="PASS" signature="runApiUerEnv()[pri:5, instance:Test.APITest@523884b2]" name="runApiUerEnv" duration-ms="289" started-at="2018-05-10T11:22:55Z" finished-at="2018-05-10T11:22:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runApiUerEnv -->
+        <test-method status="PASS" signature="verifyAddEnv()[pri:6, instance:Test.APITest@523884b2]" name="verifyAddEnv" duration-ms="38524" started-at="2018-05-10T11:22:55Z" finished-at="2018-05-10T11:23:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddEnv -->
+        <test-method status="PASS" signature="runApiSessionUpdate()[pri:7, instance:Test.APITest@523884b2]" name="runApiSessionUpdate" duration-ms="847" started-at="2018-05-10T11:23:34Z" finished-at="2018-05-10T11:23:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runApiSessionUpdate -->
+        <test-method status="PASS" signature="verifyUpdateEnv()[pri:8, instance:Test.APITest@523884b2]" name="verifyUpdateEnv" duration-ms="21263" started-at="2018-05-10T11:23:35Z" finished-at="2018-05-10T11:23:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUpdateEnv -->
+        <test-method status="PASS" signature="verifySessionStartUnStart()[pri:9, instance:Test.APITest@523884b2]" name="verifySessionStartUnStart" duration-ms="74972" started-at="2018-05-10T11:23:56Z" finished-at="2018-05-10T11:25:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySessionStartUnStart -->
+        <test-method status="PASS" signature="verifyStartDateInDB()[pri:10, instance:Test.APITest@523884b2]" name="verifyStartDateInDB" duration-ms="30" started-at="2018-05-10T11:25:11Z" finished-at="2018-05-10T11:25:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStartDateInDB -->
+        <test-method status="PASS" signature="verifyCompleteDate()[pri:11, instance:Test.APITest@523884b2]" name="verifyCompleteDate" duration-ms="115262" started-at="2018-05-10T11:25:11Z" finished-at="2018-05-10T11:27:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCompleteDate -->
+        <test-method status="PASS" signature="verifyCarryForward()[pri:12, instance:Test.APITest@523884b2]" name="verifyCarryForward" duration-ms="123034" started-at="2018-05-10T11:27:06Z" finished-at="2018-05-10T11:29:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCarryForward -->
+        <test-method status="PASS" signature="deleteRecord()[pri:0, instance:Test.APITest@523884b2]" name="deleteRecord" is-config="true" duration-ms="1253" started-at="2018-05-10T11:29:09Z" finished-at="2018-05-10T11:29:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteRecord -->
+      </class> <!-- Test.APITest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
