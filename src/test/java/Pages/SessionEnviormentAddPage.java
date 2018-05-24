@@ -20,15 +20,15 @@ public class SessionEnviormentAddPage {
 	Thread.sleep(2000);
 	driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/ul/li[2]/a")).click(); //Not Runnign Course
 	Thread.sleep(2000);
-	driver.findElement(By.xpath(".//*[@id='notRunningCourses']/div[16]/div[1]/div/span[1]")).click(); // Explore Drawer
+	driver.findElement(By.xpath(".//*[@id='notRunningCourses']/div[18]/div[1]/div/span[1]")).click(); // Explore Drawer
 	Thread.sleep(5000);
-	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[16]/div[2]/div/div/div[1]/div[2]/input")).sendKeys("Class_BCRM_KK_"+random);
+	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/div[1]/div[2]/input")).sendKeys("Class_BCRM_KK_"+random);
 	
 	Thread.sleep(5000);
 	//driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/div[1]/div[2]/span/button")).click();
-    driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[16]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(Keys.ENTER);
+    driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(Keys.ENTER);
     Thread.sleep(8000);
-    driver.findElement(By.xpath("html/body/div[3]/div[2]/div[3]/div/div[16]/div[2]/div/div/table/tbody/tr/td[2]")).click();
+    driver.findElement(By.xpath("html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/table/tbody/tr/td[2]")).click();
 	Thread.sleep(2000);
 	driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[3]/div[1]/div[1]/div/div[2]/div/form/div/div[3]/div[1]/div/span[1]")).click(); // Click educator
 	Thread.sleep(5000);
