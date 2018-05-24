@@ -26,13 +26,13 @@ public class CarryForwardPage {
 		 Thread.sleep(2000);
 		driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/ul/li[6]/a")).click(); //CarryForward
 		Thread.sleep(5000);
-		driver.findElement(By.xpath(".//*[@id='archivedCourseList']/div[1]/div[1]/div/span[1]")).click(); // Explore Drawer
+		driver.findElement(By.xpath(".//*[@id='archivedCourseList']/div[2]/div[1]/div/span[1]")).click(); // Explore Drawer
 		Thread.sleep(5000);
-		driver.findElement(By.xpath(".//*[@id='archivedCourseList']/div[1]/div[2]//div[@class='topButton']/div[1]/input")).sendKeys(UpdatedClassName);
+		driver.findElement(By.xpath(".//*[@id='archivedCourseList']/div[2]/div[2]//div[@class='topButton']/div[1]/input")).sendKeys(UpdatedClassName);
 		Thread.sleep(5000);
-		driver.findElement(By.xpath(".//*[@id='archivedCourseList']/div[1]/div[2]//div[@class='topButton']/div[1]/input")).sendKeys(Keys.ENTER);
+		driver.findElement(By.xpath(".//*[@id='archivedCourseList']/div[2]/div[2]//div[@class='topButton']/div[1]/input")).sendKeys(Keys.ENTER);
 	    Thread.sleep(5000);
-	    driver.findElement(By.xpath(".//*[@id='archivedCourseList']//div[1]/div[2]//table/tbody/tr[1]/td[1]/input")).click(); //select the radio button
+	    driver.findElement(By.xpath(".//*[@id='archivedCourseList']//div[2]/div[2]//table/tbody/tr[1]/td[1]/input")).click(); //select the radio button
 	    Thread.sleep(5000);
 	    System.out.println("*****Go to My Course->CaryForward ->Add element to repositroy****");
 	    driver.findElement(By.xpath("(.//*[@id='btnAddToRepository'])[1]")).click(); //Add To Repository
@@ -62,17 +62,17 @@ public class CarryForwardPage {
 	    driver.navigate().refresh();
 	    Thread.sleep(2000);
 	    System.out.println("*****Go to My Course->CaryForward->Add the class to repository ****");
-	    driver.findElement(By.xpath(".//*[@id='archivedCourseList']/div[1]/div[1]/div/span[1]")).click(); // Explore Drawer
+	    driver.findElement(By.xpath(".//*[@id='archivedCourseList']/div[2]/div[1]/div/span[1]")).click(); // Explore Drawer
 		Thread.sleep(5000);
-		driver.findElement(By.xpath(".//*[@id='archivedCourseList']/div[1]/div[2]//div[@class='topButton']/div[1]/input")).sendKeys(UpdatedClassName);
+		driver.findElement(By.xpath(".//*[@id='archivedCourseList']/div[2]/div[2]//div[@class='topButton']/div[1]/input")).sendKeys(UpdatedClassName);
 		Thread.sleep(2000);
-		driver.findElement(By.xpath(".//*[@id='archivedCourseList']/div[1]/div[2]//div[@class='topButton']/div[1]/input")).sendKeys(Keys.ENTER);
+		driver.findElement(By.xpath(".//*[@id='archivedCourseList']/div[2]/div[2]//div[@class='topButton']/div[1]/input")).sendKeys(Keys.ENTER);
 	    Thread.sleep(5000);
-	    String ExpCN = driver.findElement(By.xpath(".//*[@id='archivedCourseList']//div[1]/div[2]//table/tbody/tr[1]/td[2]")).getText();
+	    String ExpCN = driver.findElement(By.xpath(".//*[@id='archivedCourseList']//div[2]/div[2]//table/tbody/tr[1]/td[2]")).getText();
 	    Assert.assertEquals(UpdatedClassName, ExpCN);
 	    
 	    Thread.sleep(5000);
-	    driver.findElement(By.xpath(".//*[@id='archivedCourseList']//div[1]/div[2]//table/tbody/tr[1]/td[1]/input")).click(); //select the radio button
+	    driver.findElement(By.xpath(".//*[@id='archivedCourseList']//div[2]/div[2]//table/tbody/tr[1]/td[1]/input")).click(); //select the radio button
 	    Thread.sleep(5000);
 	    driver.findElement(By.xpath("(.//*[@id='btnAddToRepository'])[1]")).click(); //Add To Repository
 	    Thread.sleep(5000);
@@ -88,11 +88,11 @@ public class CarryForwardPage {
     
 	    System.out.println("*****Go to My Course->CaryForward->Verify the carry forwarded class is not present ****");
 	    
-	    driver.findElement(By.xpath(".//*[@id='archivedCourseList']/div[1]/div[1]/div/span[1]")).click(); // Explore Drawer
+	    driver.findElement(By.xpath(".//*[@id='archivedCourseList']/div[2]/div[1]/div/span[1]")).click(); // Explore Drawer
 		Thread.sleep(5000);
-		driver.findElement(By.xpath(".//*[@id='archivedCourseList']/div[1]/div[2]//div[@class='topButton']/div[1]/input")).sendKeys(UpdatedClassName);
+		driver.findElement(By.xpath(".//*[@id='archivedCourseList']/div[2]/div[2]//div[@class='topButton']/div[1]/input")).sendKeys(UpdatedClassName);
 		Thread.sleep(2000);
-		driver.findElement(By.xpath(".//*[@id='archivedCourseList']/div[1]/div[2]//div[@class='topButton']/div[1]/input")).sendKeys(Keys.ENTER);
+		driver.findElement(By.xpath(".//*[@id='archivedCourseList']/div[2]/div[2]//div[@class='topButton']/div[1]/input")).sendKeys(Keys.ENTER);
 	    Thread.sleep(5000);
 	    System.out.println("*****Go to My Course->CaryForward ->Verified that class is not present in carry forward screen****");
 	    driver.findElement(By.xpath("//*[@id='archivedCourseList']/div[1]//div[text()='No record found']")).isDisplayed();
@@ -106,12 +106,12 @@ public class CarryForwardPage {
 	    driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/ul/li[3]/a")).click(); //RunningCourses
 	    driver.findElement(By.xpath("(.//*[@id='runningCourses']//span[starts-with(text(),'JA It')])[4]")).click(); //clicking on ja its my future 16 17
 	    Thread.sleep(5000);
-	    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[98]/div[2]/div/div/div[1]/div[3]/input")).sendKeys(UpdatedClassName);
+	    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]/div[2]/div/div/div[1]/div[3]/input")).sendKeys(UpdatedClassName);
 	    Thread.sleep(5000);
-	    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[98]/div[2]/div/div/div[1]/div[3]/input")).sendKeys(Keys.ENTER);
+	    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]/div[2]/div/div/div[1]/div[3]/input")).sendKeys(Keys.ENTER);
 	    Thread.sleep(5000);
 	    
-	    String CarryforwardEdnDate = driver.findElement(By.xpath(".//*[@id='runningCourses']/div[98]//table/tbody/tr[1]/td[6]")).getText();		
+	    String CarryforwardEdnDate = driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]//table/tbody/tr[1]/td[6]")).getText();		
 	    
 	    String ExpectedEndDate ="08-15-2019";
 	    

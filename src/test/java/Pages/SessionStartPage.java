@@ -16,20 +16,21 @@ public class SessionStartPage {
 	
 	public void verifySessionStart (String UpdatedClassName) throws InterruptedException 
 	{
+	
 		System.out.println("******Go to My Course->Not Running->To Start the Class****");
 	Thread.sleep(5000);
 	driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[2]/nav/div/div[2]/ul/li[6]/a")).click(); // My Courses
 	Thread.sleep(2000);
 	driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/ul/li[2]/a")).click(); //Not Runnign Course
 	Thread.sleep(2000);
-	driver.findElement(By.xpath(".//*[@id='notRunningCourses']/div[16]/div[1]/div/span[1]")).click(); // Explore Drawer
+	driver.findElement(By.xpath("(.//*[@id='notRunningCourses']//span[starts-with(text(),'JA It')])[2]")).click(); // Explore Drawer
 	Thread.sleep(5000);
-	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[16]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(UpdatedClassName);
+	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(UpdatedClassName);
 	Thread.sleep(2000);
-	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[16]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(Keys.ENTER);
+	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(Keys.ENTER);
     Thread.sleep(5000);
-    driver.findElement(By.xpath(".//*[@id='notRunningCourses']/div[16]/div[2]//table/tbody/tr/td[1]")).click();
-    WebElement LabelOfClassStart = driver.findElement(By.xpath(".//*[@id='notRunningCourses']/div[16]/div[2]/div/div/div[1]/div[1]/span/button"));
+    driver.findElement(By.xpath(".//*[@id='notRunningCourses']/div[18]/div[2]//table/tbody/tr/td[1]")).click();
+    WebElement LabelOfClassStart = driver.findElement(By.xpath(".//*[@id='notRunningCourses']/div[18]/div[2]/div/div/div[1]/div[1]/span/button"));
     String actual = LabelOfClassStart.getText();
     String Expected = "Start in CK";
 	System.out.println("******Verfied the Start Button Lable****");
@@ -84,14 +85,14 @@ public class SessionStartPage {
 	System.out.println("******Go to My Course->Not Running****");
     driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/ul/li[2]/a")).click(); //Not Runnign Course
 	Thread.sleep(2000);
-	driver.findElement(By.xpath(".//*[@id='notRunningCourses']/div[16]/div[1]/div/span[1]")).click(); // Explore Drawer
+	driver.findElement(By.xpath(".//*[@id='notRunningCourses']/div[18]/div[1]/div/span[1]")).click(); // Explore Drawer
 	Thread.sleep(2000);
-	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[16]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(UpdatedClassName);
+	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(UpdatedClassName);
 	Thread.sleep(2000);
-	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[16]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(Keys.ENTER);
+	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(Keys.ENTER);
     Thread.sleep(5000);
     
-    String ActualCN= driver.findElement(By.xpath(".//*[@id='notRunningCourses']/div[16]/div[2]//table/tbody/tr[1]/td[2]")).getText();
+    String ActualCN= driver.findElement(By.xpath(".//*[@id='notRunningCourses']/div[18]/div[2]//table/tbody/tr[1]/td[2]")).getText();
 	 String ExpClassName1 = UpdatedClassName;
 		System.out.println("******Verfied the updated class name****");
 		Assert.assertEquals(ActualCN, ExpClassName1);

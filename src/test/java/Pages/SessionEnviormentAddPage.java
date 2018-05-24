@@ -13,6 +13,7 @@ public class SessionEnviormentAddPage {
 	
 	public void verifyAddEnvDetails(List<String> e,List<String> f,int random) throws InterruptedException
 	{
+		
 		System.out.println("******Go to My Course->Not Running->To verify the entroll user details****");
 	driver.navigate().refresh();
 	Thread.sleep(2000);
@@ -20,7 +21,9 @@ public class SessionEnviormentAddPage {
 	Thread.sleep(2000);
 	driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/ul/li[2]/a")).click(); //Not Runnign Course
 	Thread.sleep(2000);
-	driver.findElement(By.xpath(".//*[@id='notRunningCourses']/div[18]/div[1]/div/span[1]")).click(); // Explore Drawer
+	
+	
+	driver.findElement(By.xpath("(.//*[@id='notRunningCourses']//span[starts-with(text(),'JA It')])[2]")).click(); // Explore Drawer
 	Thread.sleep(5000);
 	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/div[1]/div[2]/input")).sendKeys("Class_BCRM_KK_"+random);
 	

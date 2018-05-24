@@ -12,14 +12,15 @@ public class SessionEnviormentUpdatePage {
 	
 	public void verifyUpdateEnvDetails (String UpdatedClassName) throws InterruptedException 
 	{
+		
 		System.out.println("******Go to My Course->Not Running> to Verify the updated value****");
 	driver.navigate().refresh();
 	Thread.sleep(5000);
-	driver.findElement(By.xpath(".//*[@id='notRunningCourses']/div[16]/div[1]/div/span[1]")).click(); // Explore Drawer
+	driver.findElement(By.xpath("(.//*[@id='notRunningCourses']//span[starts-with(text(),'JA It')])[2]")).click(); // Explore Drawer
 	Thread.sleep(2000);
-	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[16]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(UpdatedClassName);
+	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(UpdatedClassName);
 	Thread.sleep(2000);
-	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[16]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(Keys.ENTER);
+	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(Keys.ENTER);
     Thread.sleep(2000);
 /*	String ExpStartDate = "03-26-2017";
 	String ActualStartDate = driver.findElement(By.xpath(".//div[@id='notRunningCourses']/div[18]//tbody/tr[1]/td[4]")).getText();
@@ -34,7 +35,7 @@ public class SessionEnviormentUpdatePage {
 	System.out.println("EndDate is updated");
 	*/
     Thread.sleep(2000);
-    driver.findElement(By.xpath("html/body/div[3]/div[2]/div[3]/div/div[16]/div[2]/div/div/table/tbody/tr/td[2]")).click();
+    driver.findElement(By.xpath("html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/table/tbody/tr/td[2]")).click();
     Thread.sleep(2000);
     driver.findElement(By.xpath(".//*[@id='dvEnrolledUser']/div[1]/div[1]/div[1]/span[1]")).click(); //Location section
 /*    Thread.sleep(2000);
