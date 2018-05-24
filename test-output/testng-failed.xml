@@ -6,7 +6,7 @@
       <class name="Test.APITest">
         <methods>
           <include name="verifySessionStartUnStart"/>
-          <include name="requestApprovalpage"/>
+          <include name="verifyStartDateInDB"/>
           <include name="verifyCarryForward"/>
           <include name="verifyCompleteDate"/>
           <include name="initDriver"/>

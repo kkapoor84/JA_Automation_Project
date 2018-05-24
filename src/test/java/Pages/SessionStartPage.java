@@ -45,19 +45,19 @@ public class SessionStartPage {
     driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/ul/li[3]/a")).click();
     driver.findElement(By.xpath("(.//*[@id='runningCourses']//span[starts-with(text(),'JA It')])[4]")).click(); //clicking on ja its my future 16 17
     Thread.sleep(5000);
-    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[98]/div[2]/div/div/div[1]/div[3]/input")).sendKeys(UpdatedClassName);
+    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]/div[2]/div/div/div[1]/div[3]/input")).sendKeys(UpdatedClassName);
     Thread.sleep(5000);
-    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[98]/div[2]/div/div/div[1]/div[3]/input")).sendKeys(Keys.ENTER);
+    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]/div[2]/div/div/div[1]/div[3]/input")).sendKeys(Keys.ENTER);
     Thread.sleep(5000);
     //Validate the Class Name and Start Date here
 	System.out.println("******Verified the updated Class Name****");
     String ExpClassName = UpdatedClassName;
-	String ActualClassName = driver.findElement(By.xpath(".//*[@id='runningCourses']/div[98]//table/tbody/tr[1]/td[2]")).getText();
+	String ActualClassName = driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]//table/tbody/tr[1]/td[2]")).getText();
 	
 	Assert.assertEquals(ActualClassName, ExpClassName);
 
 	System.out.println("******Verifed the start date after class start****");
-	String actstartdate = driver.findElement(By.xpath(".//*[@id='runningCourses']/div[98]//table/tbody/tr[1]/td[5]")).getText();
+	String actstartdate = driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]//table/tbody/tr[1]/td[5]")).getText();
 	System.out.println("actual date is :" + actstartdate);
 	
 	// Create object of SimpleDateFormat class and decide the format
@@ -74,9 +74,9 @@ public class SessionStartPage {
 		System.out.println("******UnStart the Class***");
 	//Unstart the Class
 	Thread.sleep(2000);
-    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[98]//table/tbody/tr[1]/td[1]/input")).click();
+    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]//table/tbody/tr[1]/td[1]/input")).click();
     Thread.sleep(2000);
-    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[98]/div[2]//div[@class='topButton']/div[2]/span/button")).click();
+    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]/div[2]//div[@class='topButton']/div[2]/span/button")).click();
     Thread.sleep(2000);
     driver.findElement(By.xpath(".//*[@id='btnOk']")).click();
     Thread.sleep(5000);
