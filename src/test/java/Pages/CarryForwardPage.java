@@ -35,7 +35,7 @@ public class CarryForwardPage {
 	    driver.findElement(By.xpath(".//*[@id='archivedCourseList']//div[2]/div[2]//table/tbody/tr[1]/td[1]/input")).click(); //select the radio button
 	    Thread.sleep(5000);
 	    System.out.println("*****Go to My Course->CaryForward ->Add element to repositroy****");
-	    driver.findElement(By.xpath("(.//*[@id='btnAddToRepository'])[1]")).click(); //Add To Repository
+	    driver.findElement(By.xpath("(.//*[@id='btnAddToRepository'])[2]")).click(); //Add To Repository
 	    Thread.sleep(5000);
 
 	   List<WebElement> listofcolumn= driver.findElements(By.xpath(".//*[@id='CarryForwardCourses']/div[1]/div[2]/div[2]/table/thead/tr/th"));
@@ -74,7 +74,7 @@ public class CarryForwardPage {
 	    Thread.sleep(5000);
 	    driver.findElement(By.xpath(".//*[@id='archivedCourseList']//div[2]/div[2]//table/tbody/tr[1]/td[1]/input")).click(); //select the radio button
 	    Thread.sleep(5000);
-	    driver.findElement(By.xpath("(.//*[@id='btnAddToRepository'])[1]")).click(); //Add To Repository
+	    driver.findElement(By.xpath("(.//*[@id='btnAddToRepository'])[2]")).click(); //Add To Repository
 	    Thread.sleep(5000);
 	    
 	    WebDriverWait wd = new WebDriverWait(driver,10);

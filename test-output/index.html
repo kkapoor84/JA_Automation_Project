@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\khushboo.kapoor\AppData\Local\Temp\testng-eclipse--829116262\testng-customsuite.xml</span>
+                    <span>C:\Users\khushboo.kapoor\AppData\Local\Temp\testng-eclipse--1050819900\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">12 methods, 1 failed,   11 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Default_suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Test.APITest" hash-for-method="verifyCarryForward">verifyCarryForward</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    <span class="method-stats">12 methods,   12 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -151,6 +137,11 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Test.APITest" hash-for-method="verifyCarryForward">verifyCarryForward</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Test.APITest" hash-for-method="verifyCompleteDate">verifyCompleteDate</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -181,73 +172,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">Test.APITest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCarryForward">
-                  </a> <!-- verifyCarryForward -->
-                  <span class="method-name">verifyCarryForward</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome=66.0.3359.181)
-  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: &apos;3.6.0&apos;, revision: &apos;6fbf3ec767&apos;, time: &apos;2017-09-27T15:28:36.4Z&apos;
-System info: host: &apos;NDI-LAP-790&apos;, ip: &apos;172.20.11.157&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7), userDataDir=C:\Users\KHUSHB~1.KAP\AppData\Local\Temp\scoped_dir14228_22776}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=66.0.3359.181, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 9799670d1b16d518daa6c9776e578c8e
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at Pages.CarryForwardPage.verifyCarryForwardFucntionality(CarryForwardPage.java:35)
-	at Test.APITest.verifyCarryForward(APITest.java:164)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -305,6 +229,13 @@ Session ID: 9799670d1b16d518daa6c9776e578c8e
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="verifyCarryForward">
+                  </a> <!-- verifyCarryForward -->
+                  <span class="method-name">verifyCarryForward</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="verifyCompleteDate">
                   </a> <!-- verifyCompleteDate -->
                   <span class="method-name">verifyCompleteDate</span>
@@ -336,7 +267,7 @@ Session ID: 9799670d1b16d518daa6c9776e578c8e
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\khushboo.kapoor\AppData\Local\Temp\testng-eclipse--829116262\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\khushboo.kapoor\AppData\Local\Temp\testng-eclipse--1050819900\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -387,58 +318,58 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(12);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyCompleteDate')
+data.setCell(0, 1, 'verifyCarryForward')
 data.setCell(0, 2, 'Test.APITest')
-data.setCell(0, 3, 117781);
+data.setCell(0, 3, 120756);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifySessionStartUnStart')
+data.setCell(1, 1, 'verifyCompleteDate')
 data.setCell(1, 2, 'Test.APITest')
-data.setCell(1, 3, 76798);
+data.setCell(1, 3, 115204);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyCarryForward')
+data.setCell(2, 1, 'verifySessionStartUnStart')
 data.setCell(2, 2, 'Test.APITest')
-data.setCell(2, 3, 39625);
+data.setCell(2, 3, 73183);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'verifyAddEnv')
 data.setCell(3, 2, 'Test.APITest')
-data.setCell(3, 3, 37435);
+data.setCell(3, 3, 37965);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'requestApprovalpage')
 data.setCell(4, 2, 'Test.APITest')
-data.setCell(4, 3, 35412);
+data.setCell(4, 3, 36222);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'verifyUpdateEnv')
 data.setCell(5, 2, 'Test.APITest')
-data.setCell(5, 3, 20515);
+data.setCell(5, 3, 21526);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'openURL')
 data.setCell(6, 2, 'Test.APITest')
-data.setCell(6, 3, 13880);
+data.setCell(6, 3, 15456);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'courseRequestAPI')
 data.setCell(7, 2, 'Test.APITest')
-data.setCell(7, 3, 1350);
+data.setCell(7, 3, 863);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'runApiUerEnv')
+data.setCell(8, 1, 'runApiSessionUpdate')
 data.setCell(8, 2, 'Test.APITest')
-data.setCell(8, 3, 404);
+data.setCell(8, 3, 804);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'runApiSessionUpdate')
+data.setCell(9, 1, 'runApiUerEnv')
 data.setCell(9, 2, 'Test.APITest')
-data.setCell(9, 3, 276);
+data.setCell(9, 3, 426);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'verifyStartDateInDB')
+data.setCell(10, 1, 'dbQuery')
 data.setCell(10, 2, 'Test.APITest')
-data.setCell(10, 3, 60);
+data.setCell(10, 3, 50);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'dbQuery')
+data.setCell(11, 1, 'verifyStartDateInDB')
 data.setCell(11, 2, 'Test.APITest')
-data.setCell(11, 3, 57);
+data.setCell(11, 3, 32);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 7 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -471,57 +402,55 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">courseRequestAPI</span>
-                <span class="method-start">4192 ms</span>
+                <span class="method-start">4329 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">openURL</span>
-                <span class="method-start">5546 ms</span>
+                <span class="method-start">5195 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">requestApprovalpage</span>
-                <span class="method-start">19428 ms</span>
+                <span class="method-start">20652 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">dbQuery</span>
-                <span class="method-start">54841 ms</span>
+                <span class="method-start">56875 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runApiUerEnv</span>
-                <span class="method-start">54899 ms</span>
+                <span class="method-start">56926 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAddEnv</span>
-                <span class="method-start">55303 ms</span>
+                <span class="method-start">57353 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runApiSessionUpdate</span>
-                <span class="method-start">92739 ms</span>
+                <span class="method-start">95319 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyUpdateEnv</span>
-                <span class="method-start">93018 ms</span>
+                <span class="method-start">96125 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifySessionStartUnStart</span>
-                <span class="method-start">113534 ms</span>
+                <span class="method-start">117652 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyStartDateInDB</span>
-                <span class="method-start">190334 ms</span>
+                <span class="method-start">190836 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyCompleteDate</span>
-                <span class="method-start">190394 ms</span>
+                <span class="method-start">190868 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">verifyCarryForward</span>
-                <span class="method-start">308175 ms</span>
+                <span class="method-start">306072 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">deleteRecord</span>
-                <span class="method-start">347806 ms</span>
+                <span class="method-start">426828 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
