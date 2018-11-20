@@ -31,10 +31,10 @@ public void CourseApprove() throws InterruptedException, IOException
 	Thread.sleep(1000);
 	driver.navigate().refresh();
 	Thread.sleep(5000);
-	driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[3]/div/div[8]/div[1]/div[1]/span[1]")).click(); // Expand drawer
+	driver.findElement(By.cssSelector("[class*=glyphicon-triangle-right]")).click(); // Expand drawer
 	Thread.sleep(7000);	
 	
-		String act = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[3]/div/div[8]/div[2]/div/div/table/tbody/tr[1]/td[5]")).getText();
+		String act = driver.findElement(By.cssSelector("td[data-bind*=FormatedSubmittedDate]")).getText();
 	
 		System.out.println("******Verify the current date of request****");
 		System.out.println("actual date is :" + act);
@@ -51,9 +51,10 @@ public void CourseApprove() throws InterruptedException, IOException
 	 System.out.println("Expected date is :" + Expdate1);
 	Assert.assertEquals(act, Expdate1);
 		
-	driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[3]/div/div[8]/div[2]/div/div/table/tbody/tr[1]/td[1]")).click(); // Select Courses
+	driver.findElement(By.cssSelector("[class=text-center]>input[type=checkbox]")).click(); // Select Courses
 	Thread.sleep(5000);
-	driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[3]/div/div[8]/div[2]/div/div/div[1]/div[1]/span/button")).click(); // Approve Courses.
+
+	driver.findElement(By.xpath("//button[text()[contains(.,'Approve')]]")).click();  // Approve Courses.
 	Thread.sleep(5000);
 	driver.findElement(By.xpath("/html/body/div[6]/div/div/div[2]/div[2]/button[2]")).click(); // Yes button
 	Thread.sleep(5000);

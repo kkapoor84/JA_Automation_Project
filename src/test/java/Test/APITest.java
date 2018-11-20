@@ -44,7 +44,7 @@ public class APITest {
 	
 	
 	@BeforeClass
-	public void initDriver(){
+	public void initDriver() throws IOException, InterruptedException{
 		PMObject = new API1PostMethodStringVerification();
 		DSObject =  new DriverSetup();
 		 ALObject = new AccountLogin();
@@ -57,11 +57,10 @@ public class APITest {
 	 SSPObject= new SessionStartPage();
 	 SCPObject = new SessionCompletePage();
 	 CFPObject= new CarryForwardPage();
-	 
-	 
+	 ALObject.LoginSetup();
 	 classId = dbobject.getClassID();
 	 random = dbobject.generateRandomNumber();
-	}
+}
 	
 	@AfterClass(alwaysRun = true)
 	public void deleteRecord()
@@ -71,14 +70,14 @@ public class APITest {
 	}
 
 		
- @Test (priority=1)
+@Test (priority=1)
 	 
 	public void courseRequestAPI() throws InterruptedException
 	{
 
 	 PMObject.httpPost(classId);
 		
-	} 
+	}
 
 
 	@Test (priority=2)
@@ -87,6 +86,7 @@ public class APITest {
 	{
 		ALObject.LoginSetup();
 	}
+	
 	
 	 @Test (priority=3)
 	
@@ -108,7 +108,7 @@ public class APITest {
 	{
 		
 		SEobject.httpPost2(classId);
-	}
+	} 
 	
 	@Test (priority=6)
 	public void verifyAddEnv() throws JSONException, InterruptedException
@@ -132,6 +132,7 @@ public class APITest {
 	@Test (priority=8)
 	public void verifyUpdateEnv() throws JSONException, InterruptedException
 	{
+		
 		SEUObject.verifyUpdateEnvDetails("DemoAutomationClass");
 	}
 	

@@ -5,7 +5,7 @@
     <classes>
       <class name="Test.APITest">
         <methods>
-          <include name="verifyCarryForward"/>
+          <include name="openURL"/>
           <include name="initDriver"/>
           <include name="deleteRecord"/>
         </methods>

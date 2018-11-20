@@ -17,67 +17,78 @@ public class SessionCompletePage {
 	public void verifySessionComplete (String UpdatedClassName) throws InterruptedException 
 	{
 		System.out.println("*****Go to My Course->Not Running>to start the Class ****");
+
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[2]/nav/div/div[2]/ul/li[6]/a")).click(); // My Courses
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/ul/li[2]/a")).click(); //Not Runnign Course
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("(.//*[@id='notRunningCourses']//span[starts-with(text(),'JA It')])[2]")).click(); // Explore Drawer
-		Thread.sleep(5000);
-		driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(UpdatedClassName);
+		driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]")).click();
+		Thread.sleep(10000);
+		driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//input[@placeholder='Search Class']")).sendKeys(UpdatedClassName);
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(Keys.ENTER);
+		driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//input[@placeholder='Search Class']")).sendKeys(Keys.ENTER);
+
+	    Thread.sleep(2000);
+	    driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//div[@id='dvtable']/div[1]/following-sibling::table//td/input[@type='radio']")).click();
+
+	    driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//div[@id='dvtable']/div//span/button[text()[contains(.,'Start')]]")).click();
 	    Thread.sleep(5000);
-	    driver.findElement(By.xpath(".//*[@id='notRunningCourses']/div[18]/div[2]//table/tbody/tr[1]/td[1]")).click();
-	    Thread.sleep(5000);
-	    driver.findElement(By.xpath(".//*[@id='notRunningCourses']/div[18]/div[2]/div/div/div[1]/div[1]/span/button")).click(); //class start
-	    Thread.sleep(5000);
+		
 	    driver.findElement(By.xpath(".//*[@id='startClass']")).click();
 	 
-	    System.out.println("*****Go to My Course->Running to Complete the Class ****");
+ 
+		System.out.println("******Go to My Course->Running Courses****");
 	    Thread.sleep(5000);
-	    driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/ul/li[3]/a")).click(); //RunningCourses
-	    driver.findElement(By.xpath("(.//*[@id='runningCourses']//span[starts-with(text(),'JA It')])[4]")).click(); //clicking on ja its my future 16 17
-	    Thread.sleep(5000);
-	    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]/div[2]/div/div/div[1]/div[3]/input")).sendKeys(UpdatedClassName);
-	    Thread.sleep(5000);
-	    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]/div[2]/div/div/div[1]/div[3]/input")).sendKeys(Keys.ENTER);
-	    Thread.sleep(5000);
-	    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]//table/tbody/tr[1]/td[1]/input")).click(); //select the radio button
-	    Thread.sleep(5000);
-	    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]/div[2]//div[@class='topButton']/div[1]/span/button")).click(); //class compelte
+	    driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/ul/li[3]/a")).click();
+		driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//input[@placeholder='Search Class']")).sendKeys(UpdatedClassName);
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//input[@placeholder='Search Class']")).sendKeys(Keys.ENTER);
+
+	    Thread.sleep(2000);
+
+	    driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//div[@id='dvtable']/div[1]/following-sibling::table//td/input[@type='radio']")).click();
+	    Thread.sleep(2000);
+	    driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//div[@id='dvtable']/div//span/button[text()[contains(.,'Complete')]]")).click();
 	    Thread.sleep(2000);
 	    driver.findElement(By.xpath(".//*[@id='btnOk']")).click();
 	    Thread.sleep(5000);
-	    
+	
 	    System.out.println("*****Go to My Course->Complete COurse-> to Incomplete the Class ****");
 		driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/ul/li[4]/a")).click(); //complete course
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id='completedCourses']/div[6]/div[1]/div/span[1]")).click();  //course
-		Thread.sleep(5000);
-	    driver.findElement(By.xpath(".//*[@id='completedCourses']/div[6]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(UpdatedClassName);
-	    Thread.sleep(5000);
-	    driver.findElement(By.xpath(".//*[@id='completedCourses']/div[6]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(Keys.ENTER);
-	    Thread.sleep(5000);
-	    driver.findElement(By.xpath(".//*[@id='completedCourses']/div[6]//table/tbody/tr/td[2]/input")).click(); //select the radio button
-	    Thread.sleep(5000);
-	    driver.findElement(By.xpath(".//*[@id='completedCourses']/div[6]/div[2]//div[@class='topButton']/div[1]/span/button")).click(); // incompelte
+		driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//input[@placeholder='Search Class']")).sendKeys(UpdatedClassName);
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//input[@placeholder='Search Class']")).sendKeys(Keys.ENTER);
+
 	    Thread.sleep(2000);
+
+	    driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//div[@id='dvtable']/div[1]/following-sibling::table//td/input[@type='radio']")).click();
+	    Thread.sleep(2000);
+	    driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//div[@id='dvtable']/div//span/button[text()[contains(.,'In')]]")).click();
+	    Thread.sleep(2000);
+
 	    driver.findElement(By.xpath(".//*[@id='btnOk']")).click();
 	    Thread.sleep(5000);
 	    
 	    System.out.println("*****Go to My Course->Rnning->Tpo verify the incompleted class ****");
 	    driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/ul/li[3]/a")).click(); //RunningCourses
-	    driver.findElement(By.xpath("(.//*[@id='runningCourses']//span[starts-with(text(),'JA It')])[4]")).click(); //clicking on ja its my future 16 17
+	    driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//input[@placeholder='Search Class']")).sendKeys(UpdatedClassName);
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//input[@placeholder='Search Class']")).sendKeys(Keys.ENTER);
+
 	    Thread.sleep(5000);
-	    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]/div[2]/div/div/div[1]/div[3]/input")).sendKeys(UpdatedClassName);
-	    Thread.sleep(5000);
-	    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]/div[2]/div/div/div[1]/div[3]/input")).sendKeys(Keys.ENTER);
-	    Thread.sleep(5000);
-	    
-	    String ActCLassname= driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]//table/tbody/tr[1]/td[2]")).getText();
-	    String ExpClassname=UpdatedClassName;
-	    Assert.assertEquals(ActCLassname, ExpClassname);
+	    System.out.println("******Verified the updated Class Name****");
+	    String ExpClassName = UpdatedClassName;
+		String ActualClassName = driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//div[@id='dvtable']/div[1]/following-sibling::table//td[text()[contains(.,'Demo')]]")).getText();
+		
+		Assert.assertEquals(ActualClassName, ExpClassName);
 	    
 
 

@@ -16,26 +16,15 @@ public class SessionEnviormentUpdatePage {
 		System.out.println("******Go to My Course->Not Running> to Verify the updated value****");
 	driver.navigate().refresh();
 	Thread.sleep(5000);
-	driver.findElement(By.xpath("(.//*[@id='notRunningCourses']//span[starts-with(text(),'JA It')])[2]")).click(); // Explore Drawer
+	//driver.findElement(By.xpath("(.//*[@id='notRunningCourses']//span[starts-with(text(),'JA It')])[2]")).click(); // Explore Drawer
+	driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]")).click();
 	Thread.sleep(2000);
-	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(UpdatedClassName);
+	driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//input[@placeholder='Search Class']")).sendKeys(UpdatedClassName);
 	Thread.sleep(2000);
-	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(Keys.ENTER);
+	driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//input[@placeholder='Search Class']")).sendKeys(Keys.ENTER);
+
     Thread.sleep(2000);
-/*	String ExpStartDate = "03-26-2017";
-	String ActualStartDate = driver.findElement(By.xpath(".//div[@id='notRunningCourses']/div[18]//tbody/tr[1]/td[4]")).getText();
-	
-	Assert.assertEquals(ActualStartDate, ExpStartDate);
-	System.out.println("StartDate is updated");
-	
-	String ExpEndDate = "08-02-2017";
-	String ActualEndDate = driver.findElement(By.xpath(".//div[@id='notRunningCourses']/div[18]//tbody/tr[1]/td[5]")).getText();
-	
-	Assert.assertEquals(ActualStartDate, ExpStartDate);
-	System.out.println("EndDate is updated");
-	*/
-    Thread.sleep(2000);
-    driver.findElement(By.xpath("html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/table/tbody/tr/td[2]")).click();
+    driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//div[@id='dvtable']/div[1]/following-sibling::table//td[text()[contains(.,'Demo')]]")).click();
     Thread.sleep(2000);
     driver.findElement(By.xpath(".//*[@id='dvEnrolledUser']/div[1]/div[1]/div[1]/span[1]")).click(); //Location section
 /*    Thread.sleep(2000);

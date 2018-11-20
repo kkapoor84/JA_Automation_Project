@@ -1,65 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="12" passed="12">
+<testng-results skipped="0" failed="1" ignored="0" total="12" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="427932" started-at="2018-05-25T10:52:33Z" finished-at="2018-05-25T10:59:41Z">
+  <suite name="Default suite" duration-ms="471704" started-at="2018-11-20T10:02:37Z" finished-at="2018-11-20T10:10:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="427932" started-at="2018-05-25T10:52:33Z" finished-at="2018-05-25T10:59:41Z">
+    <test name="Default test" duration-ms="471704" started-at="2018-11-20T10:02:37Z" finished-at="2018-11-20T10:10:28Z">
       <class name="Test.APITest">
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:Test.APITest@523884b2]" name="initDriver" is-config="true" duration-ms="4324" started-at="2018-05-25T16:22:33Z" finished-at="2018-05-25T16:22:38Z">
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:Test.APITest@523884b2]" name="initDriver" is-config="true" duration-ms="66263" started-at="2018-11-20T15:32:37Z" finished-at="2018-11-20T15:33:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="courseRequestAPI()[pri:1, instance:Test.APITest@523884b2]" name="courseRequestAPI" duration-ms="863" started-at="2018-05-25T16:22:38Z" finished-at="2018-05-25T16:22:39Z">
+        <test-method status="PASS" signature="courseRequestAPI()[pri:1, instance:Test.APITest@523884b2]" name="courseRequestAPI" duration-ms="8751" started-at="2018-11-20T15:33:43Z" finished-at="2018-11-20T15:33:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- courseRequestAPI -->
-        <test-method status="PASS" signature="openURL()[pri:2, instance:Test.APITest@523884b2]" name="openURL" duration-ms="15456" started-at="2018-05-25T16:22:39Z" finished-at="2018-05-25T16:22:54Z">
+        <test-method status="FAIL" signature="openURL()[pri:2, instance:Test.APITest@523884b2]" name="openURL" duration-ms="25093" started-at="2018-11-20T15:33:52Z" finished-at="2018-11-20T15:34:17Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div/div[5]/div/form/div[2]/input"}
+  (Session info: chrome=70.0.3538.77)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'NDI-LAP-790', ip: '172.20.14.111', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7), userDataDir=C:\Users\KHUSHB~1.KAP\AppData\Local\Temp\scoped_dir21356_1786}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=70.0.3538.77, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0fec5a26482ed735140baf69c5f15e97
+*** Element info: {Using=xpath, value=/html/body/div/div[5]/div/form/div[2]/input}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div/div[5]/div/form/div[2]/input"}
+  (Session info: chrome=70.0.3538.77)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'NDI-LAP-790', ip: '172.20.14.111', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7), userDataDir=C:\Users\KHUSHB~1.KAP\AppData\Local\Temp\scoped_dir21356_1786}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=70.0.3538.77, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0fec5a26482ed735140baf69c5f15e97
+*** Element info: {Using=xpath, value=/html/body/div/div[5]/div/form/div[2]/input}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:458)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at Pages.AccountLogin.LoginSetup(AccountLogin.java:34)
+	at Test.APITest.openURL(APITest.java:87)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openURL -->
-        <test-method status="PASS" signature="requestApprovalpage()[pri:3, instance:Test.APITest@523884b2]" name="requestApprovalpage" duration-ms="36222" started-at="2018-05-25T16:22:54Z" finished-at="2018-05-25T16:23:30Z">
+        <test-method status="PASS" signature="requestApprovalpage()[pri:3, instance:Test.APITest@523884b2]" name="requestApprovalpage" duration-ms="36308" started-at="2018-11-20T15:34:17Z" finished-at="2018-11-20T15:34:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- requestApprovalpage -->
-        <test-method status="PASS" signature="dbQuery()[pri:4, instance:Test.APITest@523884b2]" name="dbQuery" duration-ms="50" started-at="2018-05-25T16:23:30Z" finished-at="2018-05-25T16:23:30Z">
+        <test-method status="PASS" signature="dbQuery()[pri:4, instance:Test.APITest@523884b2]" name="dbQuery" duration-ms="54" started-at="2018-11-20T15:34:53Z" finished-at="2018-11-20T15:34:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbQuery -->
-        <test-method status="PASS" signature="runApiUerEnv()[pri:5, instance:Test.APITest@523884b2]" name="runApiUerEnv" duration-ms="426" started-at="2018-05-25T16:23:30Z" finished-at="2018-05-25T16:23:31Z">
+        <test-method status="PASS" signature="runApiUerEnv()[pri:5, instance:Test.APITest@523884b2]" name="runApiUerEnv" duration-ms="954" started-at="2018-11-20T15:34:53Z" finished-at="2018-11-20T15:34:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runApiUerEnv -->
-        <test-method status="PASS" signature="verifyAddEnv()[pri:6, instance:Test.APITest@523884b2]" name="verifyAddEnv" duration-ms="37965" started-at="2018-05-25T16:23:31Z" finished-at="2018-05-25T16:24:09Z">
+        <test-method status="PASS" signature="verifyAddEnv()[pri:6, instance:Test.APITest@523884b2]" name="verifyAddEnv" duration-ms="48927" started-at="2018-11-20T15:34:54Z" finished-at="2018-11-20T15:35:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAddEnv -->
-        <test-method status="PASS" signature="runApiSessionUpdate()[pri:7, instance:Test.APITest@523884b2]" name="runApiSessionUpdate" duration-ms="804" started-at="2018-05-25T16:24:09Z" finished-at="2018-05-25T16:24:09Z">
+        <test-method status="PASS" signature="runApiSessionUpdate()[pri:7, instance:Test.APITest@523884b2]" name="runApiSessionUpdate" duration-ms="958" started-at="2018-11-20T15:35:43Z" finished-at="2018-11-20T15:35:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runApiSessionUpdate -->
-        <test-method status="PASS" signature="verifyUpdateEnv()[pri:8, instance:Test.APITest@523884b2]" name="verifyUpdateEnv" duration-ms="21526" started-at="2018-05-25T16:24:09Z" finished-at="2018-05-25T16:24:31Z">
+        <test-method status="PASS" signature="verifyUpdateEnv()[pri:8, instance:Test.APITest@523884b2]" name="verifyUpdateEnv" duration-ms="18605" started-at="2018-11-20T15:35:44Z" finished-at="2018-11-20T15:36:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUpdateEnv -->
-        <test-method status="PASS" signature="verifySessionStartUnStart()[pri:9, instance:Test.APITest@523884b2]" name="verifySessionStartUnStart" duration-ms="73183" started-at="2018-05-25T16:24:31Z" finished-at="2018-05-25T16:25:44Z">
+        <test-method status="PASS" signature="verifySessionStartUnStart()[pri:9, instance:Test.APITest@523884b2]" name="verifySessionStartUnStart" duration-ms="70911" started-at="2018-11-20T15:36:03Z" finished-at="2018-11-20T15:37:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySessionStartUnStart -->
-        <test-method status="PASS" signature="verifyStartDateInDB()[pri:10, instance:Test.APITest@523884b2]" name="verifyStartDateInDB" duration-ms="32" started-at="2018-05-25T16:25:44Z" finished-at="2018-05-25T16:25:44Z">
+        <test-method status="PASS" signature="verifyStartDateInDB()[pri:10, instance:Test.APITest@523884b2]" name="verifyStartDateInDB" duration-ms="56" started-at="2018-11-20T15:37:14Z" finished-at="2018-11-20T15:37:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyStartDateInDB -->
-        <test-method status="PASS" signature="verifyCompleteDate()[pri:11, instance:Test.APITest@523884b2]" name="verifyCompleteDate" duration-ms="115204" started-at="2018-05-25T16:25:44Z" finished-at="2018-05-25T16:27:39Z">
+        <test-method status="PASS" signature="verifyCompleteDate()[pri:11, instance:Test.APITest@523884b2]" name="verifyCompleteDate" duration-ms="80477" started-at="2018-11-20T15:37:14Z" finished-at="2018-11-20T15:38:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCompleteDate -->
-        <test-method status="PASS" signature="verifyCarryForward()[pri:12, instance:Test.APITest@523884b2]" name="verifyCarryForward" duration-ms="120756" started-at="2018-05-25T16:27:39Z" finished-at="2018-05-25T16:29:40Z">
+        <test-method status="PASS" signature="verifyCarryForward()[pri:12, instance:Test.APITest@523884b2]" name="verifyCarryForward" duration-ms="112965" started-at="2018-11-20T15:38:34Z" finished-at="2018-11-20T15:40:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCarryForward -->
-        <test-method status="PASS" signature="deleteRecord()[pri:0, instance:Test.APITest@523884b2]" name="deleteRecord" is-config="true" duration-ms="1098" started-at="2018-05-25T16:29:40Z" finished-at="2018-05-25T16:29:41Z">
+        <test-method status="PASS" signature="deleteRecord()[pri:0, instance:Test.APITest@523884b2]" name="deleteRecord" is-config="true" duration-ms="1339" started-at="2018-11-20T15:40:27Z" finished-at="2018-11-20T15:40:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteRecord -->

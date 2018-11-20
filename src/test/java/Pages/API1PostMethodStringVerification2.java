@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class API1PostMethodStringVerification {
+public class API1PostMethodStringVerification2 {
 	
 	
 	@Test
@@ -56,7 +56,7 @@ public class API1PostMethodStringVerification {
 	    String expResult = "\"Thank you! Your request will be processed within the next 24 hours.\"";
 		//Asserting that result of Norway is Oslo
 		Assert.assertEquals(result ,expResult);
-		System.out.println("***** Post Request done********");
+
 
 		}
 	

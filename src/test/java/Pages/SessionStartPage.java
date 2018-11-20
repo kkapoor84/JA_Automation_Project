@@ -23,14 +23,16 @@ public class SessionStartPage {
 	Thread.sleep(2000);
 	driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/ul/li[2]/a")).click(); //Not Runnign Course
 	Thread.sleep(2000);
-	driver.findElement(By.xpath("(.//*[@id='notRunningCourses']//span[starts-with(text(),'JA It')])[2]")).click(); // Explore Drawer
-	Thread.sleep(5000);
-	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(UpdatedClassName);
+	driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]")).click();
+	Thread.sleep(10000);
+	driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//input[@placeholder='Search Class']")).sendKeys(UpdatedClassName);
 	Thread.sleep(2000);
-	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(Keys.ENTER);
-    Thread.sleep(5000);
-    driver.findElement(By.xpath(".//*[@id='notRunningCourses']/div[18]/div[2]//table/tbody/tr/td[1]")).click();
-    WebElement LabelOfClassStart = driver.findElement(By.xpath(".//*[@id='notRunningCourses']/div[18]/div[2]/div/div/div[1]/div[1]/span/button"));
+	driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//input[@placeholder='Search Class']")).sendKeys(Keys.ENTER);
+
+    Thread.sleep(2000);
+    driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//div[@id='dvtable']/div[1]/following-sibling::table//td/input[@type='radio']")).click();
+
+    WebElement LabelOfClassStart = driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//div[@id='dvtable']/div//span/button[text()[contains(.,'Start')]]"));
     String actual = LabelOfClassStart.getText();
     String Expected = "Start in CK";
 	System.out.println("******Verfied the Start Button Lable****");
@@ -44,21 +46,22 @@ public class SessionStartPage {
 	System.out.println("******Go to My Course->Running Courses****");
     Thread.sleep(5000);
     driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/ul/li[3]/a")).click();
-    driver.findElement(By.xpath("(.//*[@id='runningCourses']//span[starts-with(text(),'JA It')])[4]")).click(); //clicking on ja its my future 16 17
-    Thread.sleep(5000);
-    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]/div[2]/div/div/div[1]/div[3]/input")).sendKeys(UpdatedClassName);
-    Thread.sleep(5000);
-    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]/div[2]/div/div/div[1]/div[3]/input")).sendKeys(Keys.ENTER);
-    Thread.sleep(5000);
+	driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//input[@placeholder='Search Class']")).sendKeys(UpdatedClassName);
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//input[@placeholder='Search Class']")).sendKeys(Keys.ENTER);
+
+    Thread.sleep(2000);
     //Validate the Class Name and Start Date here
 	System.out.println("******Verified the updated Class Name****");
     String ExpClassName = UpdatedClassName;
-	String ActualClassName = driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]//table/tbody/tr[1]/td[2]")).getText();
+	String ActualClassName = driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//div[@id='dvtable']/div[1]/following-sibling::table//td[text()[contains(.,'Demo')]]")).getText();
 	
 	Assert.assertEquals(ActualClassName, ExpClassName);
 
 	System.out.println("******Verifed the start date after class start****");
-	String actstartdate = driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]//table/tbody/tr[1]/td[5]")).getText();
+	String actstartdate = driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//div[@id='dvtable']/div[1]/following-sibling::table//td[5]")).getText();
 	System.out.println("actual date is :" + actstartdate);
 	
 	// Create object of SimpleDateFormat class and decide the format
@@ -75,24 +78,25 @@ public class SessionStartPage {
 		System.out.println("******UnStart the Class***");
 	//Unstart the Class
 	Thread.sleep(2000);
-    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]//table/tbody/tr[1]/td[1]/input")).click();
+    driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//div[@id='dvtable']/div[1]/following-sibling::table//td/input[@type='radio']")).click();
     Thread.sleep(2000);
-    driver.findElement(By.xpath(".//*[@id='runningCourses']/div[96]/div[2]//div[@class='topButton']/div[2]/span/button")).click();
+    driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//div[@id='dvtable']/div//span/button[text()[contains(.,'Start')]]")).click();
     Thread.sleep(2000);
     driver.findElement(By.xpath(".//*[@id='btnOk']")).click();
     Thread.sleep(5000);
     
 	System.out.println("******Go to My Course->Not Running****");
-    driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/ul/li[2]/a")).click(); //Not Runnign Course
+	driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[1]/ul/li[2]/a")).click(); //Not Runnign Course
 	Thread.sleep(2000);
-	driver.findElement(By.xpath(".//*[@id='notRunningCourses']/div[18]/div[1]/div/span[1]")).click(); // Explore Drawer
+	driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]")).click();
 	Thread.sleep(2000);
-	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(UpdatedClassName);
+	driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//input[@placeholder='Search Class']")).sendKeys(UpdatedClassName);
 	Thread.sleep(2000);
-	driver.findElement(By.xpath("//html/body/div[3]/div[2]/div[3]/div/div[18]/div[2]/div/div/div[1]/div[2]/input")).sendKeys(Keys.ENTER);
-    Thread.sleep(5000);
+	driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//input[@placeholder='Search Class']")).sendKeys(Keys.ENTER);
+
+    Thread.sleep(2000);
     
-    String ActualCN= driver.findElement(By.xpath(".//*[@id='notRunningCourses']/div[18]/div[2]//table/tbody/tr[1]/td[2]")).getText();
+    String ActualCN= driver.findElement(By.xpath("//span[text()[contains(.,'My Future 16-17')]]/parent::div/parent::div/following-sibling::div//div[@id='dvtable']/div[1]/following-sibling::table//td[text()[contains(.,'Demo')]]")).getText();
 	 String ExpClassName1 = UpdatedClassName;
 		System.out.println("******Verfied the updated class name****");
 		Assert.assertEquals(ActualCN, ExpClassName1);
