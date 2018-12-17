@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="UAtestSuit" parallel="false">
+
+	<listeners>
+		<listener class-name="com.ja.utils.ExtentReporterNG" />
+	</listeners>
+
+	<test name="Smoke Test in Accountlogintest class" preserve-order="true">
+
+		<groups>
+			<run>
+				<include name="smoke" />
+			</run>
+		</groups>
+
+
+		<classes>
+			<class name="com.ja.test.AccountLoginTest" />
+		</classes>
+
+
+	</test>
+
+	<test name="Smoke Test in Approverequesttest class"
+		preserve-order="true">
+
+		<groups>
+			<run>
+				<include name="smoke" />
+			</run>
+		</groups>
+
+
+		<classes>
+			<class name="com.ja.test.ApproveRequestTest" />
+		</classes>
+
+
+	</test>
+
+
+</suite> <!-- Suite -->
