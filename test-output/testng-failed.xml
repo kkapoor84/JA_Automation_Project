@@ -4,10 +4,10 @@
   <listeners>
     <listener class-name="com.ja.utils.ExtentReporterNG"/>
   </listeners>
-  <test name="Regression Test in Approverequesttest class(failed)">
+  <test name="Smoke Test in Approverequesttest class(failed)">
     <groups>
       <run>
-        <include name="regression"/>
+        <include name="smoke"/>
       </run>
     </groups>
     <classes>
@@ -20,16 +20,12 @@
       <class name="com.ja.test.ApproveRequestTest">
         <methods>
           <include name="verifyTotalNumberOfCourseRequest"/>
-          <include name="verifyTableData"/>
           <include name="verifyPostAPIAndLogin"/>
           <include name="deleteRecord1"/>
-          <include name="verifyTableHeader"/>
-          <include name="verifyCourseRequestApproved"/>
           <include name="verifyRequestHeaderInApproveRequest"/>
-          <include name="verifyRequestFieldsTitle"/>
           <include name="courseRequestAPI"/>
         </methods>
       </class> <!-- com.ja.test.ApproveRequestTest -->
     </classes>
-  </test> <!-- Regression Test in Approverequesttest class(failed) -->
+  </test> <!-- Smoke Test in Approverequesttest class(failed) -->
 </suite> <!-- Failed suite [UAtestSuit] -->
